@@ -3,15 +3,17 @@
   "version": "1.0.0",
   "description": "MCP server for clustering keywords by SERP overlap using graph-based URL intersection analysis",
   "type": "module",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "bin": {
-    "mcp-serp-clustering": "src/index.js"
+    "mcp-serp-clustering": "dist/index.js"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
-    "start": "node src/index.js"
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "mcp",
@@ -33,14 +35,18 @@
   },
   "homepage": "https://github.com/dredozubov/mcp-serp-clustering#readme",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.0.0"
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "csv-parse": "^5.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "files": [
-    "src/",
-    "scripts/",
+    "dist/",
     "README.md",
     "LICENSE"
   ]
