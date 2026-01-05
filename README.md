@@ -10,14 +10,22 @@ This approach is more accurate than semantic clustering because it uses Google's
 
 ## Installation
 
+First, authenticate with GitHub Packages (one-time setup):
+
 ```bash
-npx mcp-serp-clustering
+npm login --registry=https://npm.pkg.github.com --scope=@dredozubov
+```
+
+Then run via npx:
+
+```bash
+npx @dredozubov/mcp-serp-clustering
 ```
 
 Or install globally:
 
 ```bash
-npm install -g mcp-serp-clustering
+npm install -g @dredozubov/mcp-serp-clustering
 ```
 
 ### Requirements
@@ -34,10 +42,15 @@ Add to your Claude Desktop config (`~/Library/Application Support/Claude/claude_
   "mcpServers": {
     "serp-clustering": {
       "command": "npx",
-      "args": ["-y", "mcp-serp-clustering"]
+      "args": ["-y", "@dredozubov/mcp-serp-clustering"]
     }
   }
 }
+```
+
+Note: You need to be authenticated with GitHub Packages for npx to work. Run this once:
+```bash
+npm login --registry=https://npm.pkg.github.com --scope=@dredozubov
 ```
 
 ## Tool: cluster_keywords

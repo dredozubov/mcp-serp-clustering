@@ -1,11 +1,14 @@
 {
-  "name": "mcp-serp-clustering",
+  "name": "@dredozubov/mcp-serp-clustering",
   "version": "1.0.0",
   "description": "MCP server for clustering keywords by SERP overlap using graph-based URL intersection analysis",
   "type": "module",
   "main": "src/index.js",
   "bin": {
     "mcp-serp-clustering": "src/index.js"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "start": "node src/index.js"
