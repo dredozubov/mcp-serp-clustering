@@ -1,0 +1,44 @@
+{
+  "name": "mcp-serp-clustering",
+  "version": "1.0.0",
+  "description": "MCP server for clustering keywords by SERP overlap using graph-based URL intersection analysis",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "mcp-serp-clustering": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "seo",
+    "serp",
+    "clustering",
+    "keywords",
+    "search-engine-optimization"
+  ],
+  "author": "Denis Redozubov",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dredozubov/mcp-serp-clustering.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dredozubov/mcp-serp-clustering/issues"
+  },
+  "homepage": "https://github.com/dredozubov/mcp-serp-clustering#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "src/",
+    "scripts/",
+    "README.md",
+    "LICENSE"
+  ]
+}
